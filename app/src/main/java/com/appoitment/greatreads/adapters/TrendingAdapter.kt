@@ -8,10 +8,11 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.appoitment.greatreads.R
-import com.appoitment.greatreads.dataclasses.HomeDataClass
+import com.appoitment.greatreads.data.TrendingData
 import com.appoitment.greatreads.fragments.Home
+import com.bumptech.glide.Glide
 
-class TrendingAdapter(private var mListener: Home, private val data: List<HomeDataClass>):RecyclerView.Adapter<TrendingAdapter.ViewHolder>() {
+class TrendingAdapter(private var mListener: Home, private val trendingData: List<TrendingData>):RecyclerView.Adapter<TrendingAdapter.ViewHolder>() {
 
     private val item : MutableList<CardView>
         get() {
@@ -19,25 +20,25 @@ class TrendingAdapter(private var mListener: Home, private val data: List<HomeDa
         }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val v = LayoutInflater.from(parent.context).inflate(R.layout.item_trending, parent, false)
-        return ViewHolder(v)
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.item_trending, parent, false)
+        return ViewHolder(itemView)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.title.text = data[position].title
-        holder.image.setImageResource(data[position].image)
-        item.add(holder.card)
+        val currentData = trendingData[position]
+        holder.apply {
+            name.text = currentData.name
+        }
+        Glide.with(holder.itemView.context).load(currentData.image).into(holder.image);
     }
 
     override fun getItemCount(): Int {
-        TODO("Not yet implemented")
+        return trendingData.size
     }
 
-    inner class ViewHolder
-    internal constructor(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val image: ImageView = itemView.findViewById(R.id.cardrecycler)
-        val title: TextView = itemView.findViewById(R.id.headingHorizontal)
+    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val image: ImageView = itemView.findViewById(R.id.ivTrending)
+        val name: TextView = itemView.findViewById(R.id.tvBookName)
         val card: CardView = itemView.findViewById(R.id.card)
-
     }
 }

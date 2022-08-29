@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.Home"
     android:layout_margin="2dp">
-
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
     <TextView
         android:id="@+id/tvTrending"
         android:layout_width="wrap_content"
@@ -27,6 +29,299 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvTrending"
         app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="3dp"
         />
 
+    <TextView
+        android:id="@+id/tvCategories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Categories"
+        android:textColor="#3756B0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rvTrending"
+        android:textSize="24sp"
+        android:layout_marginVertical="10dp"
+        android:layout_marginStart="3dp"
+        />
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rowCount="4"
+        android:columnCount="2"
+        app:layout_constraintTop_toBottomOf="@id/tvCategories"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bFiction"
+            android:layout_height="100dp"
+            android:layout_width="195dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/iv_circular"
+            android:backgroundTint="#9874a7"
+            android:text="Fiction"
+            android:textSize="20sp"
+            android:textColor="#F4F4F4"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bNonFiction"
+            android:layout_height="100dp"
+            android:layout_width="195dp"
+            android:layout_margin="3dp"
+            android:backgroundTint="#E3652D"
+            android:background="@drawable/iv_circular"
+            android:text="NON FICTION"
+            android:textSize="20sp"
+            android:textColor="#F4F4F4"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bAction"
+            android:layout_height="100dp"
+            android:layout_width="195dp"
+            android:layout_margin="3dp"
+            android:backgroundTint="#922035"
+            android:background="@drawable/iv_circular"
+            android:text="Action"
+            android:textSize="20sp"
+            android:textColor="#F4F4F4"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bBiography"
+            android:layout_height="100dp"
+            android:layout_width="195dp"
+            android:layout_margin="3dp"
+            android:backgroundTint="#FF005C"
+            android:background="@drawable/iv_circular"
+            android:text="BIOGRAPHY"
+            android:textSize="20sp"
+            android:textColor="#F4F4F4"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bHorror"
+            android:layout_height="100dp"
+            android:layout_width="195dp"
+            android:layout_margin="3dp"
+            android:backgroundTint="#216F80"
+            android:background="@drawable/iv_circular"
+            android:text="HORROR"
+            android:textSize="20sp"
+            android:textColor="#F4F4F4"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bHistory"
+            android:layout_height="100dp"
+            android:layout_width="195dp"
+            android:layout_margin="3dp"
+            android:backgroundTint="#9243F6"
+            android:background="@drawable/iv_circular"
+            android:text="History"
+            android:textSize="20sp"
+            android:textColor="#F4F4F4"
+            />
+    </GridLayout>
+    <TextView
+        android:id="@+id/tvAuthors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Top Authors"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@id/gridLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="3dp"
+        android:layout_marginVertical="10dp"
+        android:textColor="#3756B0"
+        />
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAuthors"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:scrollbarFadeDuration="@integer/material_motion_duration_short_1"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+                android:id="@+id/cv"
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:background="@drawable/chetan_bhagat"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:cardCornerRadius="50dp"
+                android:backgroundTint="#3756B0"
+                android:layout_margin="5dp"
+                >
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivChetanBhagat"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:background="@drawable/chetan_bhagat"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            />
+            </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+            <TextView
+                android:id="@+id/tvChetanBhagat"
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:text="Chetan \nBhagat"
+                android:textSize="18sp"
+                android:textColor="#3756B0"
+                app:layout_constraintTop_toBottomOf="@id/cv"
+                android:gravity="center"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_margin="5dp"
+                />
+            <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+                android:id="@+id/cv2"
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:background="@drawable/chetan_bhagat"
+                app:layout_constraintStart_toEndOf="@id/cv"
+                app:layout_constraintTop_toTopOf="parent"
+                app:cardCornerRadius="50dp"
+                android:backgroundTint="#3756B0"
+                android:layout_margin="5dp"
+                >
+            <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivAmrita_Pritam"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:background="@drawable/chetan_bhagat"
+            android:layout_margin="5dp"
+                android:layout_gravity="center"
+            />
+            </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+            <TextView
+                android:id="@+id/tvAmritaPritam"
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:text="Amrita \nPritam"
+                android:textSize="18sp"
+                android:textColor="#3756B0"
+                app:layout_constraintTop_toBottomOf="@id/cv2"
+                android:gravity="center"
+                app:layout_constraintStart_toEndOf="@id/tvChetanBhagat"
+                android:layout_margin="5dp"
+                />
+
+
+            <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+                android:id="@+id/cv3"
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:background="@drawable/chetan_bhagat"
+                app:layout_constraintStart_toEndOf="@id/cv2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:cardCornerRadius="50dp"
+                android:backgroundTint="#3756B0"
+                android:layout_margin="5dp"
+                >
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivSudha_murthy"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/chetan_bhagat"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center"
+                    />
+            </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+            <TextView
+                android:id="@+id/tvSudhaMurthy"
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:text="Danielle \nSteel"
+                android:textSize="18sp"
+                android:textColor="#3756B0"
+                app:layout_constraintTop_toBottomOf="@id/cv3"
+                android:gravity="center"
+                android:layout_margin="5dp"
+                app:layout_constraintStart_toEndOf="@id/tvAmritaPritam"
+                />
+
+            <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+                android:id="@+id/cv4"
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:background="@drawable/chetan_bhagat"
+                app:layout_constraintStart_toEndOf="@id/cv3"
+                app:layout_constraintTop_toTopOf="parent"
+                app:cardCornerRadius="50dp"
+                android:backgroundTint="#3756B0"
+                android:layout_margin="5dp"
+                >
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivKiranDesai"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/chetan_bhagat"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center"
+                    />
+            </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+            <TextView
+                android:id="@+id/tvKiranDesai"
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:text="Kiran \nDesai"
+                android:textSize="18sp"
+                android:textColor="#3756B0"
+                app:layout_constraintTop_toBottomOf="@id/cv3"
+                android:gravity="center"
+                android:layout_margin="5dp"
+                app:layout_constraintStart_toEndOf="@id/tvSudhaMurthy"
+                />
+
+            <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+                android:id="@+id/cv5"
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:background="@drawable/chetan_bhagat"
+                app:layout_constraintStart_toEndOf="@id/cv4"
+                app:layout_constraintTop_toTopOf="parent"
+                app:cardCornerRadius="50dp"
+                android:backgroundTint="#3756B0"
+                android:layout_margin="5dp"
+                >
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivCharlesDickens"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/chetan_bhagat"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="center"
+                    />
+            </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+            <TextView
+                android:id="@+id/tvCharlesDickens"
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:text="Charles \nDickens"
+                android:textSize="18sp"
+                android:textColor="#3756B0"
+                app:layout_constraintTop_toBottomOf="@id/cv5"
+                android:gravity="center"
+                android:layout_margin="5dp"
+                app:layout_constraintStart_toEndOf="@id/tvKiranDesai"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </HorizontalScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

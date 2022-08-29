@@ -6,15 +6,20 @@
         <entry key="..\:/Users/vibhu/AndroidStudioProjects/GreatReads/app/src/main/res/drawable/button_bg.xml" value="0.171" />
         <entry key="..\:/Users/vibhu/AndroidStudioProjects/GreatReads/app/src/main/res/drawable/edittext.xml" value="0.14666666666666667" />
         <entry key="..\:/Users/vibhu/AndroidStudioProjects/GreatReads/app/src/main/res/drawable/gradient.xml" value="0.171" />
-        <entry key="..\:/Users/vibhu/AndroidStudioProjects/GreatReads/app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="..\:/Users/vibhu/AndroidStudioProjects/GreatReads/app/src/main/res/drawable/iv_circular.xml" value="0.1355" />
+        <entry key="..\:/Users/vibhu/AndroidStudioProjects/GreatReads/app/src/main/res/drawable/line.xml" value="0.1" />
+        <entry key="..\:/Users/vibhu/AndroidStudioProjects/GreatReads/app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="..\:/Users/vibhu/AndroidStudioProjects/GreatReads/app/src/main/res/layout/activity_main.xml" value="0.16197916666666667" />
+        <entry key="..\:/Users/vibhu/AndroidStudioProjects/GreatReads/app/src/main/res/layout/activity_signup.xml" value="0.13296280461735785" />
         <entry key="..\:/Users/vibhu/AndroidStudioProjects/GreatReads/app/src/main/res/layout/fragment_bookmark.xml" value="0.14791666666666667" />
-        <entry key="..\:/Users/vibhu/AndroidStudioProjects/GreatReads/app/src/main/res/layout/fragment_home.xml" value="0.16197916666666667" />
+        <entry key="..\:/Users/vibhu/AndroidStudioProjects/GreatReads/app/src/main/res/layout/fragment_categories.xml" value="0.13296280461735785" />
+        <entry key="..\:/Users/vibhu/AndroidStudioProjects/GreatReads/app/src/main/res/layout/fragment_home.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/vibhu/AndroidStudioProjects/GreatReads/app/src/main/res/layout/fragment_login.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/vibhu/AndroidStudioProjects/GreatReads/app/src/main/res/layout/fragment_login__admin.xml" value="0.13296280461735785" />
         <entry key="..\:/Users/vibhu/AndroidStudioProjects/GreatReads/app/src/main/res/layout/fragment_login__student.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/vibhu/AndroidStudioProjects/GreatReads/app/src/main/res/layout/fragment_profile.xml" value="0.16197916666666667" />
-        <entry key="..\:/Users/vibhu/AndroidStudioProjects/GreatReads/app/src/main/res/layout/item_trending.xml" value="0.10688328345446772" />
+        <entry key="..\:/Users/vibhu/AndroidStudioProjects/GreatReads/app/src/main/res/layout/item_categories.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/vibhu/AndroidStudioProjects/GreatReads/app/src/main/res/layout/item_trending.xml" value="0.4466666666666667" />
         <entry key="..\:/Users/vibhu/AndroidStudioProjects/GreatReads/app/src/main/res/menu/bottom_nav.xml" value="0.16197916666666667" />
         <entry key="..\:/Users/vibhu/AndroidStudioProjects/GreatReads/app/src/main/res/xml/network_security_config.xml" value="0.1" />
       </map>
